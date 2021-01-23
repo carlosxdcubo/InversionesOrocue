@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sentra - Free Bootstrap Theme</title>
+        
+<!-- 
+
+Sentra Template
+
+https://templatemo.com/tm-518-sentra
+
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/light-box.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/validar.js"></script>
+       
+    </head>
+
+<body>
+
+
+
+        <header class="nav-down responsive-nav hidden-lg hidden-md">
+            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <nav>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#top">Incio</a></li>
+                        <li><a href="#featured">Proveedores</a></li>
+                        <li><a href="#projects">¿Quienes somos?</a></li>
+                        <li><a href="#video">Presentación</a></li>
+                        
+                        <li><a href="#contact">Contactenos</a></li>
+                        <li><a><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal_info2">login</button></a></li><li><a><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal_info">Register</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="sidebar-navigation hidde-sm hidden-xs">
+            <div class="logo">
+                <img src="img/logo.png" href="#top" width="50%">
+                
+            </div>
+            <br><br>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#top">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            ¿Quienes somos?
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#featured">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Proveedores
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#video">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Presentación
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Contactenos
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal_info2">login</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal_info">Register</button>
+                        </a>
+                    </li>
+                </ul>               
+            </nav>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/Inversiones-Orocue-SAS-105068871482645" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#contact"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+<!-- Login y Register -->
+<div class="modal fade" id="modal_info2">
+         <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Ingresar</h4>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- body -->
+                <div class="modal-body">
+                    <form id="iniciarSesion" name="IniciarSesion" method="POST" action="index.html">
+                Usuario<br>
+                <input type="text" id="Nickname2" name="Nickname" pattern="[a-zA-Z0-9]+" placeholder="Ingrese su Usuario" required><br>
+                Contraseña<br>
+                <input type="password" id="Password2"name="Password" maxlength="20" minlength="8"  autocomplete="off"  placeholder="Ingrese su Contraseña" required><br>
+                <hr>
+                <input type="submit" name="enviar" class="boton" value="Iniciar Sesion">
+                </form>
+                </div>  
+
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+    <div class="modal fade" id="modal_info">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Resgistrarse</h4>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- body -->
+                <div class="modal-body">
+                    <form id="registro" name="registro" method="POST" action="index.html" onsubmit="return validar();">
+                Nombre:<br>
+                <input type="text" id="Nombre" name="Nombre" placeholder="Ingrese su Nombre" required><br>
+                Apellido:<br>
+                <input type="text" id="Apellido" name="Apellido" placeholder="Ingrese su Apellido" required><br>
+                Username:<br>
+                <input type="text" id="Nickname" name="Nickname" pattern="[a-zA-Z0-9]+" placeholder="Ingrese su Usuario" required><br>
+                Contraseña:<br>
+                <input type="password" id="Password" name="Password" maxlength="20" minlength="8"  autocomplete="new-password"  placeholder="Ingrese su Contraseña" required><br>
+                E-mail:<br>
+                <input type="email" id="Email" name="Email" placeholder="Ingrese su E-mail" required><br>
+                Edad:<br>
+                <input type="number" id="Edad" name="Edad" min="18" placeholder="Ingrese su Edad" required><br>
+                Descripción:<br>
+                <input type="submit"  name="enviar" class="boton" value="Registrate">
+                <input type="reset" class="boton" value="Borrar">
+                <hr>
+                </form>
+                </div>  
+
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- ---------------------->
+                   
+        <div class="slider">
+            <div class="Modern-Slider content-section" id="top">
+                <!-- Item -->
+                <div class="item item-1">
+                    <div class="img-fill">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div>
+                          <h1>Inversiones <em>Orocué</em><br></h1>
+                          <p>Sabana,sabana amplia,
+
+                            del llano grande y florido,
+
+                            de palmares y garzas blancas</p>
+
+                            <p>ruidosos los ríos crecidos,
+
+                            las que limpiaron mis lágrimas
+
+                            de soledades y olvidos.</p>
+                          <div class="white-button button">
+                              <a href="https://www.municipio.com.co/municipio-orocue.html" target="_blank"> Acerca de...</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-2">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        <div class="info">
+                        <div>
+                          <h1>Llanos Orientales</h1>
+                          <p>“¡Oh selva, esposa del silencio, madre de la soledad y de la </p><p>neblina! ¿Qué hado maligno me dejó prisionero en tu cárcel verde?” -La voragine</p>
+                          
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-3">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        <div class="info">
+                        <div>
+                          <h1>Rio Meta</h1>
+                          <p>“Y todo el inmenso acuario se extendía hacia el horizonte, como  </p><p>un lago de peltre donde flotan las plumas ambicionadas”. -La voragine</p>
+                          
+                    
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+            </div>
+        </div>
+
+
+        <div class="page-content">
+            
+            <section id="projects" class="content-section">
+                <div class="section-heading">
+                    <h1>Inversiones<br><em>Orocué S.A.S</em></h1>
+                    <p>Somos una empresa ubicada en Orocué, Casanare. Nos encargamos de distribuir productos de la canasta básica del hogar. Suplimos a los habitantes del municipio, y municipios aledaños, con productos de calidad al por menor y por mayor.</p>
+                </div>
+                <div class="section-content">
+                    <div class="masonry">
+                        <div class="row">
+                            <div class="item">
+                                <div class="col-md-8">
+                                    <a href="img/portfolio_big_1.jpg" data-lightbox="image"><img src="img/portfolio_1.jpg" alt="image 1"></a>
+                                </div>
+                            </div>
+                            <div class="item second-item">
+                                <div class="col-md-4">
+                                    <a href="img/portfolio_big_2.jpg" data-lightbox="image"><img src="img/portfolio_2.jpg" alt="image 2"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4">
+                                    <a href="img/portfolio_big_3.jpg" data-lightbox="image"><img src="img/portfolio_3.jpg" alt="image 3"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4">
+                                    <a href="img/portfolio_big_4.jpg" data-lightbox="image"><img src="img/portfolio_4.jpg" alt="image 4"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-8">
+                                    <a href="img/portfolio_big_5.jpg" data-lightbox="image"><img src="img/portfolio_5.jpg" alt="image 5"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </section>
+            <section id="featured" class="content-section">
+                <div class="section-heading">
+                    <h1>Nuestros<br><em>Proveedores</em></h1>
+                    <p>Contamos con los mejores provedores y 
+                    productos del país, con el objetivo de brindar siempre a nuestros consumidores la mejor calidad de nuestros productos, la cual esperamos obtener con el trabajo que realizamos en conjunto con nuestros proveedores.</p>
+                </div>
+                <div class="section-content">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_1.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="https://www.zenu.com.co/" target="_blank">Seguir leyendo</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                
+                                <p>Somos una marca colombiana de tradición, con productos para acompañar los mejores momentos en familia. Nos preocupamos por despertar emociones, recuperando los grandes y pequeños rituales que hay alrededor de la mesa, y transformándolos en una oportunidad para que sean inolvidables.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_2.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="https://www.alpina.com/" target="_blank">Seguir leyendo</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                
+                                <p>Alimentos nutritivos en lácteos, postres y bebidas, recetas saludables y noticias para alimentar tu vida. Alpina Productos Alimenticios S.A. es una empresa multinacional colombiana productora de alimentos ​ a base de lácteos.​ Alpina se caracteriza por sus productos que son en su mayoría enfocados a los niños.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_3.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="https://www.colcafe.com/" target="_blank">Seguir leyendo</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                
+                                <p>Colcafé, es una empresa colombiana filial del Grupo Multilatino de Alimentos, “Grupo Nutresa” especializada en la industrialización y comercialización de café y productos afines. Nuestra producción se centra en las categorías de Café Tostado y Molido, Café Soluble, en presentaciones de polvo, granulado y liofilizado, y Mezclas de Café como los cappuccinos y tres en uno.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_4.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="https://colombina.com/" target="_blank">Seguir leyendo</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                             
+                                <p>Contamos con más 90 años de experiencia en brindar productos.
+
+                                Fabricamos y comercializamos alimentos de diferentes categorías, gracias a un equipo de colaboradores que crea los mejores sabores y experiencias.
+                                Tenemos la 1.ª posición en el mercado de dulcería de Región Andina, Centroamérica y Caribe.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_5.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="https://www.pastasdoria.com/">Seguir leyendo</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                            
+                                <p>Doria es una compañía hecha con el corazón de los colombianos, una empresa que tiene toda la ascendencia italiana de las mejores pastas y que fue fundada en 1952 por Don Arturo Sesana Vitali quien instaló en Bogotá su fábrica de pastas con equipos traídos de Italia.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_6.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="https://empresa.nestle.es/es" target="_blank">Seguir leyendo</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                        
+                                <p>NESTLÉ con base en Vevey, Suiza, fue fundada en 1866 por Henri Nestlé y hoy es la compañía líder mundial en nutrición, salud y bienestar.Los productos existentes de NESTLÉ se desarrollan por medio de innovación y renovación mientras se mantiene un balance en actividades geográficas y líneas de productos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="video" class="content-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h1>¿Qué esperas?<em>Únete</em></h1>
+                            <p>Registrate, recibe información y descuentos adicionales</p>
+                        </div>
+                      
+                       
+                    </div>
+                    <div class="col-md-12">
+                        <div class="box-video">
+                           
+                            <div class="video-container">
+
+                                <video src="videos/vid_1.mp4" width=100% controls poster="vistaprevia.jpg">
+                                Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+                                La versión descargable está disponible en <a href="URL">Enlace</a>. 
+                            </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="content-section">
+                <div id="map">
+                
+                	<!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                    -->
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380.44471522254236!2d-71.33566149373847!3d4.79333132366968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e132d8457287c25%3A0xb48548bcef949b5!2sInversiones%20Orocu%C3%A9!5e0!3m2!1ses-419!2sco!4v1611366679348!5m2!1ses-419!2sco"width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div id="contact-content">
+                    <div class="section-heading">
+                        <h1><em> Contactenos</em></h1>
+                        <p>Ubiquenos en Facebook, WhatsApp, llamenos o escribanos un correo:</p>
+                    </div>
+                <div class="row">
+                    <div class="col-md-6">
+                            <div class="c-log">
+                                  <img src="img/wp.png" width="100px" >
+                            </div>
+                            <div class="c-info">
+                                  <h2>+57 312 3106745 </h2>
+                            </div>
+                        
+                        </div> 
+                        <div class="col-md-6">
+
+                             <div class="c-info">
+                                   <img src="img/email.png" width="100px" > 
+                            </div>
+                            <div class="c-info">
+                                   <h2> lizgranjero@hotmail.com</h2>
+                            </div>
+                </div>
+                 </div>
+                    
+                </div>
+            </section>
+            <section class="footer">
+                <p>Copyright &copy; 2019 Inversiones Orocué</p>
+            </section>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Hide Header on on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            
+            // Make sure they scroll more than delta
+            if(Math.abs(lastScrollTop - st) <= delta)
+                return;
+            
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight){
+                // Scroll Down
+                $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            
+            lastScrollTop = st;
+        }
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+
+</body>
+</html>
